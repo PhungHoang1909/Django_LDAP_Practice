@@ -1,16 +1,7 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
-from django.contrib import messages
 from django.contrib.auth import authenticate, login
-
-def home(request):
-    if request.user.is_authenticated:
-        messages.success(request, 'You have successfully logged in!')
-    return render(request, 'home.html')
-
-@login_required
-def profile(request):
-    return render(request, 'profile.html')
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 def custom_login(request):
     if request.method == 'POST':
@@ -24,3 +15,10 @@ def custom_login(request):
         else:
             messages.error(request, 'Login failed: Please check your username and password.')
     return render(request, 'login.html')
+
+def home(request):
+    return render(request, 'home.html')
+
+@login_required
+def profile(request):
+    return render(request, 'profile.html')
