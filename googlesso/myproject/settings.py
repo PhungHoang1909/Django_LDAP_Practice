@@ -37,8 +37,18 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
     "myapp",
+    "django_google_sso",  # Add django_google_sso
+
 ]
+
+GOOGLE_SSO_CLIENT_ID = "491760433926-tdsu53of9dc94gtvpfdj6pqk48ie8mce.apps.googleusercontent.com"
+GOOGLE_SSO_PROJECT_ID = "apt-reference-427303-p7"
+GOOGLE_SSO_CLIENT_SECRET = "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"
+
+GOOGLE_SSO_ALLOWABLE_DOMAINS = ["gmail.com"]
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

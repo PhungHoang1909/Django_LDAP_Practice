@@ -1,0 +1,4 @@
+Project ID: apt-reference-427303-p7
+
+ClientID: 491760433926-tdsu53of9dc94gtvpfdj6pqk48ie8mce.apps.googleusercontent.com
+ClientSecret: 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
